@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
@@ -88,7 +91,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Content:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Content:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">How to get and install TRD?</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">How to configure TRD?</a><ul>
@@ -98,11 +101,13 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="paymentaddress.html">Payment Address</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tezossigner.html">How to use the Tezos Signer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tezossignerdocker.html">Tezos Signer with Docker (WIP)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="run.html">How to run TRD?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rundocker.html">How to run TRD in Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plugins.html">Plugins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linuxservice.html">Run as Linux Service (WIP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="state_machine.html">TRD State Machines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributors.html">For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Test structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statistics.html">Anonymous Statistics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="codeofconduct.html">Contributor Covenant Code of Conduct</a></li>
 </ul>
@@ -227,7 +232,14 @@ If you want to use with a decimal operator within your config, please use a deci
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rewards_type</span><span class="p">:</span> <span class="n">actual</span>
 </pre></div>
 </div>
+<p>Note that ‘actual’ payouts will throw an error if:</p>
 </dd>
+</dl>
+<ol class="arabic simple">
+<li><p>The ‘RELEASE_OVERRIDE’ parameter is set to a value inferior or equal to -5, since the payouts are done before the cycle is completed, or</p></li>
+<li><p>The ‘RELEASE_OVERRIDE’ parameter is set to a value inferior or equal to -1, and the backend API is a Tezos node RPC, as actual payout calculation in this context is not implemented.</p></li>
+</ol>
+<dl>
 <dt><strong>service_fee</strong></dt><dd><p>A decimal in range [0-100]. Also known as the baker’s fee. This is evaluated as a percentage value. Example: If set to 5, then 5% of baking rewards are kept as a service fee by the baker.</p>
 <p>Example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">service_fee</span><span class="p">:</span> <span class="mi">10</span>

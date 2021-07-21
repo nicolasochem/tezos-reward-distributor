@@ -1,0 +1,285 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Test structure &mdash; Tezos Reward Distributor (TRD) 9.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Anonymous Statistics" href="statistics.html" />
+    <link rel="prev" title="For Developers" href="contributors.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Tezos Reward Distributor (TRD)
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                9.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Content:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">How to get and install TRD?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">How to configure TRD?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="paymentaddress.html">Payment Address</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tezossigner.html">How to use the Tezos Signer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run.html">How to run TRD?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rundocker.html">How to run TRD in Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugins.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linuxservice.html">Run as Linux Service (WIP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="state_machine.html">TRD State Machines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributors.html">For Developers</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Test structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#unit-tests">Unit tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#regression-tests">Regression tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#integration-tests">Integration tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#smoke-tests">Smoke tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#acceptance-test-wip">Acceptance test (WIP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#non-functional-tests-wip">Non functional tests (WIP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#verification-wip">Verification (WIP)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="statistics.html">Anonymous Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codeofconduct.html">Contributor Covenant Code of Conduct</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Tezos Reward Distributor (TRD)</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Test structure</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/testing.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="test-structure">
+<h1>Test structure<a class="headerlink" href="#test-structure" title="Permalink to this headline">¶</a></h1>
+<p>The tests in TRD are run in the following order:</p>
+<ol class="arabic simple">
+<li><p>unit tests</p></li>
+<li><p>regression tests</p></li>
+<li><p>integration tests</p></li>
+<li><p>smoke tests</p></li>
+<li><p>acceptance tests (WIP)</p></li>
+<li><p>non functional tests. (WIP)</p></li>
+<li><p>formal verification (WIP)</p></li>
+</ol>
+<div class="section" id="unit-tests">
+<h2>Unit tests<a class="headerlink" href="#unit-tests" title="Permalink to this headline">¶</a></h2>
+<p>Unit tests test only one specific function or method of a class.
+The smaller the function and the more specialized it is the better the unit test.</p>
+</div>
+<div class="section" id="regression-tests">
+<h2>Regression tests<a class="headerlink" href="#regression-tests" title="Permalink to this headline">¶</a></h2>
+<p>Regression tests are tests which document fixed bugs.
+To implement a regression test you need to do the following:</p>
+<ol class="arabic simple">
+<li><p>Have a bug in trd (see bug label in issues)</p></li>
+<li><p>Reproduce the bug in a test under the <cite>regression/</cite> directory.</p></li>
+<li><p>Assert the behaviour which you would like this bug to have.</p></li>
+<li><p>Fix the bug and make the test pass.</p></li>
+</ol>
+</div>
+<div class="section" id="integration-tests">
+<h2>Integration tests<a class="headerlink" href="#integration-tests" title="Permalink to this headline">¶</a></h2>
+<p>Integration tests test the behaviour of trd. Meaning it tests the interaction between multiple functions or classes.</p>
+</div>
+<div class="section" id="smoke-tests">
+<h2>Smoke tests<a class="headerlink" href="#smoke-tests" title="Permalink to this headline">¶</a></h2>
+<p>Smoke tests test if trd starts, runs and ends under different cirumstances.</p>
+</div>
+<div class="section" id="acceptance-test-wip">
+<h2>Acceptance test (WIP)<a class="headerlink" href="#acceptance-test-wip" title="Permalink to this headline">¶</a></h2>
+<p>Acceptance tests test the functionality which users are expecting to work.
+E.g. the correct and reliable distribution of rewards.</p>
+</div>
+<div class="section" id="non-functional-tests-wip">
+<h2>Non functional tests (WIP)<a class="headerlink" href="#non-functional-tests-wip" title="Permalink to this headline">¶</a></h2>
+<p>Non functional tests test the performance, load time, transaction speed etc. of trd.</p>
+</div>
+<div class="section" id="verification-wip">
+<h2>Verification (WIP)<a class="headerlink" href="#verification-wip" title="Permalink to this headline">¶</a></h2>
+<p>Checking the FSM model systematically with exhaustive exploration.
+This consists of exploring all states and transitions in the model (<a class="reference external" href="https://en.wikipedia.org/wiki/Formal_verification">source</a>).</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="statistics.html" class="btn btn-neutral float-right" title="Anonymous Statistics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="contributors.html" class="btn btn-neutral float-left" title="For Developers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, habanoz, utdrmac, amzid, jdsika, dansan566.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
